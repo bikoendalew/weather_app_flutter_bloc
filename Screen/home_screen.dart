@@ -36,7 +36,7 @@ class HomeScreen extends StatelessWidget {
                   child: Container(
                     height: 300,
                     width: 300,
-                    decoration: BoxDecoration(
+                    decoration: const BoxDecoration(
                         shape: BoxShape.circle, color: Colors.deepPurple),
                   ),
                 ),
@@ -54,6 +54,29 @@ class HomeScreen extends StatelessWidget {
                     decoration: const BoxDecoration(color: Colors.transparent),
                   ),
                 ),
+                SizedBox(
+                  width: MediaQuery.of(context).size.width,
+                  height: MediaQuery.of(context).size.height,
+                  child: Column(
+                    crossAxisAlignment: CrossAxisAlignment.start,
+                    children: [
+                      const Text(
+                        '📍 data',
+                        style: TextStyle(
+                            fontWeight: FontWeight.w300, color: Colors.white),
+                      ),
+                      const SizedBox(height: 8),
+                      const Text(
+                        'Good Morning',
+                        style: TextStyle(
+                            color: Colors.white,
+                            fontSize: 25,
+                            fontWeight: FontWeight.bold),
+                      ),
+                      Image.asset('assets/5.png'),
+                    ],
+                  ),
+                )
               ],
             )),
       ),
